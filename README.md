@@ -3,6 +3,8 @@
 As bat detectors featuring a graphical display are quite expensive but RTL-SDR dongles are very cheap (~11 euros on ebay/amazon), I wanted to make a bat detector based on the generic chinese RTL-SDR dongle with the R820T2 tuner.
 The idea was to use audio from a microphone or ultrasonic receiver, amplify it and to feed it to a RTL SDR in direct sampling mode. The bat noises can be watched on the waterfall and made audible using high bandwidth AM demodulation of SDR software like gqrx.
 
+For mobile usage, there is a [version of RFAnalyzer](https://github.com/jbvoelker/RFAnalyzer) with a quick and dirty hack to support the direct sampling mode.
+
 ## The circuit
 ![circuit](https://github.com/jbvoelker/BatSDR/blob/master/images/circuit.png)
 
