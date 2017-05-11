@@ -14,9 +14,11 @@ It is quite small in size (3.5mm x 2.65mm) and the four contact pads are not eas
 
 ![microphone](https://github.com/jbvoelker/BatSDR/blob/master/images/microphone.jpg)
 
+The two holes in the perf board can be used to attach the microphone to the housing.
+
 The microphone needs a voltage of 1.5V-3.6V to operate. The RTL-SDR has a regulator which generates 3.3V from the 5V USB power.
 Two cables can be soldered to the regulator and to Vpp and GND of the microphone. A 0.1µF capacitor between Vpp and GND is recommended.
-I have placed the coupling capacitor for the microphone on the same perf board as the capacitor to create a unit which can be easily swapped when I change the microphone. During experimentation, a capacitor of 87pF did the best job in suppressing low frequencies (feedback when demodulating or talking near the receiver) and letting the ultrasonic signals pass.
+I have placed the coupling capacitor for the microphone on the same perf board as the capacitor to create a unit which can be easily swapped when I change the microphone. During experimentation, a capacitor of 83pF did the best job in suppressing low frequencies (feedback when demodulating or talking near the receiver) and letting the ultrasonic signals pass.
 
 ![microphone-power](https://github.com/jbvoelker/BatSDR/blob/master/images/mic-power.jpg)
 
