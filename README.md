@@ -14,8 +14,6 @@ It is quite small in size (3.5mm x 2.65mm) and the four contact pads are not eas
 
 ![microphone](https://github.com/jbvoelker/BatSDR/blob/master/images/microphone.jpg)
 
-The two holes in the perf board can be used to attach the microphone to the housing.
-
 The microphone needs a voltage of 1.5V-3.6V to operate. The RTL-SDR has a regulator which generates 3.3V from the 5V USB power.
 Two cables can be soldered to the regulator and to Vpp and GND of the microphone. A 0.1µF capacitor between Vpp and GND is recommended.
 I have placed the coupling capacitor for the microphone on the same perf board as the capacitor to create a unit which can be easily swapped when I change the microphone. During experimentation, a capacitor of 83pF did the best job in suppressing low frequencies (feedback when demodulating or talking near the receiver) and letting the ultrasonic signals pass.
@@ -38,3 +36,11 @@ The +5V for the preamp circuit are taken from the 5V USB line, GND and 3.3V are 
 As soldering wires directly to the QN and QP terminals bypasses static protection, be careful with static discharge or you could kill the dongle (while soldering, I had a cat on my lap and the dongle still works, so they are probably not too easy to destroy).
 
 ![dongle](https://github.com/jbvoelker/BatSDR/blob/master/images/dongle.jpg)
+
+## Result
+The bat detector can be mounted in a plastic housing. A size of 84mm x 59.5mm x 30mm is perfect to accomodate the dongle and the preamp circuit.
+The microphone board is mounted to the front of the case using two screws.
+A piece of speaker grille can be added to protect the interior from larger particles.
+![front](https://github.com/jbvoelker/BatSDR/blob/master/images/front.jpg)
+
+![inside the housing](https://github.com/jbvoelker/BatSDR/blob/master/images/inside.jpg)
