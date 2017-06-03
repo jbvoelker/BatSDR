@@ -7,22 +7,22 @@ For mobile usage, there is a [version of RFAnalyzer](https://github.com/jbvoelke
 
 The following screenshot has been taken while observing bats hunting over a lake surrounded by blossoming chestnut trees.
 
-![waterfall](https://github.com/jbvoelker/BatSDR/blob/master/images/waterfall.png)
+![waterfall](images/waterfall.png)
 
 ## The circuit
-![circuit](https://github.com/jbvoelker/BatSDR/blob/master/images/circuit.png)
+![circuit](images/circuit.png)
 
 ### The Microphone
 The microphone used in this project is a Knowles SPH0611LR5H-1 MEMS microphone which is intended for audio usage but offers a decent sensibility in the ultrasonic range.
 It is quite small in size (3.5mm x 2.65mm) and the four contact pads are not easy to solder. As the hole of the microphone is located on the solder side, I connected it dead bug style to a perf board. To hold it while soldering, I stuck the microphone on the table using double sided adhesive tape.
 
-![microphone](https://github.com/jbvoelker/BatSDR/blob/master/images/microphone.jpg)
+![microphone](images/microphone.jpg)
 
 The microphone needs a voltage of 1.5V-3.6V to operate. The RTL-SDR has a regulator which generates 3.3V from the 5V USB power.
 Two cables can be soldered to the regulator and to Vpp and GND of the microphone. A 0.1µF capacitor between Vpp and GND is recommended.
 I have placed the coupling capacitor for the microphone on the same perf board as the capacitor to create a unit which can be easily swapped when I change the microphone. During experimentation, a capacitor of 83pF did the best job in suppressing low frequencies (feedback when demodulating or talking near the receiver) and letting the ultrasonic signals pass.
 
-![microphone-power](https://github.com/jbvoelker/BatSDR/blob/master/images/mic-power.jpg)
+![microphone-power](images/mic-power.jpg)
 
 If you are unable to obtain the microphone or don't dare soldering it, a simple 40 KHz ultrasonic receiver can be used instead. It must be connected directly to the preamp and offers less sensitivity above and below the resonance peak as well as a strange amplitude frequency response.
 
@@ -31,7 +31,7 @@ I have not done any experiments with a dedicated ultrasonic microphone which is 
 ### The preamp circuit
 The preamp is based on a single BC549C transistor. The 1nF capacitor between B and E suppresses high frequency signals, the 3.3nF coupling capacitor should prevent any low frequency signals which have been picked up and amplified to get to the RTL-SDR. The terminals marked QN and QP in the circuit diagram go directly to the two soldering pads marked in the image below.
 
-![preamp](https://github.com/jbvoelker/BatSDR/blob/master/images/preamp.jpg)
+![preamp](images/preamp.jpg)
 
 ## Modifications to the dongle
 The generic chinese dongle features two holes with lands on the solder side which are marked QP and QN. These connections are used to feed a signal to the dongle which can be received in the direct sampling mode (direct_samp=2 in the device string).
@@ -39,12 +39,12 @@ The +5V for the preamp circuit are taken from the 5V USB line, GND and 3.3V are 
 
 As soldering wires directly to the QN and QP terminals bypasses static protection, be careful with static discharge or you could kill the dongle (while soldering, I had a cat on my lap and the dongle still works, so they are probably not too easy to destroy).
 
-![dongle](https://github.com/jbvoelker/BatSDR/blob/master/images/dongle.jpg)
+![dongle](images/dongle.jpg)
 
 ## Result
 The bat detector can be mounted in a plastic housing. A size of 84mm x 59.5mm x 30mm is perfect to accomodate the dongle and the preamp circuit.
 The microphone board is mounted to the front of the case using two screws.
 A piece of speaker grille can be added to protect the interior from larger particles.
-![front](https://github.com/jbvoelker/BatSDR/blob/master/images/front.jpg)
+![front](images/front.jpg)
 
-![inside the housing](https://github.com/jbvoelker/BatSDR/blob/master/images/inside.jpg)
+![inside the housing](images/inside.jpg)
