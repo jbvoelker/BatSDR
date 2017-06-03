@@ -45,6 +45,7 @@ As soldering wires directly to the QN and QP terminals bypasses static protectio
 The bat detector can be mounted in a plastic housing. A size of 84mm x 59.5mm x 30mm is perfect to accomodate the dongle and the preamp circuit.
 The microphone board is mounted to the front of the case using two screws.
 A piece of speaker grille can be added to protect the interior from larger particles.
+
 ![front](images/front.jpg)
 
 ![inside the housing](images/inside.jpg)
